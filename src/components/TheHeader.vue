@@ -41,16 +41,16 @@ function noActiveLink() {
 
 <template >
     <div class="header">
-        <a href="/#" @click="noActiveLink()"><img src="../assets/img/portfolio.png" alt="Logo d'un portfolio bleu foncé dans un cercle dont le fond est de couleur bleue claire et le contour orange"></a>
+        <router-link :to="{path: '/', hash:'#app'}" @click="noActiveLink()"><img src="../assets/img/portfolio.png" alt="Logo d'un portfolio bleu foncé dans un cercle dont le fond est de couleur bleue claire et le contour orange"></router-link>
         <div>      
             <h1>Portfolio de Fabien Lubre</h1>
             <nav>
                 <ul>
-                    <li><a href="/#presentation" :class="{active: isThePresentationActive}" @click="activeLink('activeThePresentation')">Présentation</a></li>
-                    <li><a href="/#myCv" :class="{active: isMyCvActive}" @click="activeLink('activeMyCv')">CV</a></li>
-                    <li><a href="/#theSocketterie" :class="{active: isTheSocketterieActive}" @click="activeLink('activeTheSocketterie')">La Socketterie - Cahier des charges</a></li>
-                    <li><a href="/#dynamicComment" :class="{active: isDynamicCommentActive}" @click="activeLink('activeDynamicComment')">Zone de commentaire dynamique</a></li>
-                    <li><a href="/#contactForm" :class="{active: isContactFormActive}" @click="activeLink('activeContactForm')">Contact</a></li>
+                    <li><router-link :to="{path: '/', hash: '#presentation'}" :class="{active: isThePresentationActive}" @click="activeLink('activeThePresentation')">Présentation</router-link></li>
+                    <li><router-link :to="{path: '/', hash: '#myCv'}" :class="{active: isMyCvActive}" @click="activeLink('activeMyCv')">CV</router-link></li>
+                    <li><router-link :to="{path :'/', hash: '#theSocketterie'}" :class="{active: isTheSocketterieActive}" @click="activeLink('activeTheSocketterie')">La Socketterie - Cahier des charges</router-link></li>
+                    <li><router-link :to="{path: '/', hash: '#dynamicComment'}" :class="{active: isDynamicCommentActive}" @click="activeLink('activeDynamicComment')">Zone de commentaire dynamique</router-link></li>
+                    <li><router-link :to="{path: '/', hash: '#contactForm'}" :class="{active: isContactFormActive}" @click="activeLink('activeContactForm')">Contact</router-link></li>
                 </ul>
             </nav>
         </div>

@@ -6,6 +6,12 @@ import TheProject from '../components/TheProject.vue';
 import TheModal from '../components/TheModal.vue';
 import ContactForm from '../components/ContactForm.vue';
 
+import imageCv from '../assets/img/imageCv.jpg';
+import imageSocketterie from '../assets/img/logoSocketterie.jpg';
+import imageDynamicComment from '../assets/img/commentairesDynamiques.jpg';
+
+import pdfSocketterie from '../assets/projects/Cahier_des_charges_La_Socketterie.pdf';
+
 let isModalCvActive = ref(false);
 let isModalSocketterieActive = ref(false);
 let isModalDynamicCommentActive = ref(false);
@@ -15,7 +21,7 @@ let isModalDynamicCommentActive = ref(false);
 
 let myCv = {
   title: "Mon CV",
-  srcImg: "/src/assets/img/imageCv.jpg",
+  srcImg: imageCv,
   altImg: "Vue d'ensemble du CV de Fabien Lubre",
   id: "myCv",
   openModal: ()=>{isModalCvActive.value = true}
@@ -23,7 +29,7 @@ let myCv = {
 
 let theSocketterie = {
   title: "La Socketterie - Cahier des charges",
-  srcImg: "/src/assets/img/logoSocketterie.jpg",
+  srcImg: imageSocketterie,
   altImg: "Logo de la Socketterie représenté par une paire de chaussettes déparaillées avec l'une jaune et l'autre verte et le texte La Socketterie écrit en-dessous",
   id: "theSocketterie",
   openModal: ()=>{isModalSocketterieActive.value = true}
@@ -31,7 +37,7 @@ let theSocketterie = {
 
 let dynamicComment = {
   title: "Zone de commentaire dynamique",
-  srcImg: "/src/assets/img/commentairesDynamiques.jpg",
+  srcImg: imageDynamicComment,
   altImg: "Vue d'ensemble de la page web du projet Zone de commentaire dynamique",
   id: "dynamicComment",
   openModal: ()=>{isModalDynamicCommentActive.value = true}
@@ -46,11 +52,11 @@ let modalCv = reactive({
   title: "Mon CV",
   timeAttribute: "2024-04-21",
   timeText: "21/04/2024",
-  srcImg: "/src/assets/img/imageCv.jpg",
+  srcImg: imageCv,
   altImg: "Vue d'ensemble du CV de Fabien Lubre",
   technologies: ["HTML", "CSS"],
-  seeProject: "/src/assets/projects/cvLubre/index.html",
-  linkGitHub: "https://github.com/fb-lb/cv_Lubre",
+  seeProject: "https://fb-lb.github.io/CEF_devoirs_cv",
+  linkGitHub: "https://github.com/fb-lb/CEF_devoirs_cv",
   activeModal: isModalCvActive,
   close: ()=>{isModalCvActive.value = false}
 });
@@ -59,10 +65,11 @@ let modalSocketterie = reactive({
   title: "La Socketterie - Cahier des charges",
   timeAttribute: "2024-05-23",
   timeText: "23/05/2024",
-  srcImg: "/src/assets/img/logoSocketterie.jpg",
+  srcImg: imageSocketterie,
   altImg: "Logo de la Socketterie représenté par une paire de chaussettes déparaillées avec l'une jaune et l'autre verte et le texte La Socketterie écrit en-dessous",
   technologies: ["Word", "Adobe Acrobat"],
-  seeProject: "/src/assets/projects/Cahier_des_charges_La_Socketterie.pdf",
+  seeProject: pdfSocketterie,
+  //seeProject: "/src/assets/projects/Cahier_des_charges_La_Socketterie.pdf",
   linkGitHub: "#",
   activeModal: isModalSocketterieActive,
   close: ()=>{isModalSocketterieActive.value = false}
@@ -72,11 +79,11 @@ let modalDynamicComment = reactive({
   title: "Zone de commentaire dynamique",
   timeAttribute: "2024-06-12",
   timeText: "12/06/2024",
-  srcImg: "/src/assets/img/commentairesDynamiques.jpg",
+  srcImg: imageDynamicComment,
   altImg: "Vue d'ensemble de la page web du projet Zone de commentaire dynamique",
   technologies: ["HTML", "JavaScript"],
-  seeProject: "/src/assets/projects/commentaire_dynamique/index.html",
-  linkGitHub: "https://github.com/fb-lb/commentaire_dynamique",
+  seeProject: "https://fb-lb.github.io/CEF_devoirs_commentaire-dynamique",
+  linkGitHub: "https://github.com/fb-lb/CEF_devoirs_commentaire-dynamique",
   activeModal: isModalDynamicCommentActive,
   close: ()=>{isModalDynamicCommentActive.value = false}
 });

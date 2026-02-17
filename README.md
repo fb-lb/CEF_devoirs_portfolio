@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 
 This template will enable you to present yourself and your creations to employers or customers with Vue 3 in Vite.
 
@@ -23,6 +23,8 @@ npm run dev
 ```
 
 ### Compile and Minify for Production
+
+In production, you can need a url basename. To use one, you can add a value to the base property in vite.config.js
 
 ```sh
 npm run build
