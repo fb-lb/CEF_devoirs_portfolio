@@ -46,7 +46,7 @@ onMounted(()=>{
             email.value = "";
             subject.value = "";
             message.value = "";
-            alert("Merci, votre mail a bien été envoyé à " + mail);
+            alert("Merci, votre mail a bien été envoyé à " + mail + "\n (Ce formulaire est factice, à visé pédagogique, aucun mail n'a été envoyé en réalité)");
             return false;
         };
     };
